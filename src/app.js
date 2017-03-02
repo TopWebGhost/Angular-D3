@@ -1,16 +1,6 @@
 'use strict';
 
 (() => {
-  angular.module('app', ['ngRoute'])
-  .config(['$routeProvider', '$locationProvider',($routeProvider, $locationProvider) => {
-    $routeProvider
-    .when('/dashboard', {
-      template: '<dashboard></dashboard>'
-    })
-    .otherwise({
-      redirectTo: '/dashboard'
-    });
+  angular.module('app', [])
 
-    $locationProvider.html5Mode(true);
-  }]);
 })();
