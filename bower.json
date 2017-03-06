@@ -1,0 +1,21 @@
+{
+  "name": "angular-d3",
+  "description": "d3 line chart for angular",
+  "main": "costview/costview.component.js",
+  "authors": [
+    "jace"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "d3"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

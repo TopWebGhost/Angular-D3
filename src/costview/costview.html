@@ -1,51 +1,18 @@
 <div class="main">
-  <div class="menu">
-    <ul class="filter-select">
-      <li class="selected">
-        1w
-      </li>
-      <li>
-        2w
-      </li>
-      <li>
-        1m
-      </li>
-      <li>
-        2m
-      </li>
-      <li>
-        1y
-      </li>
-      <li>
-        All
-      </li>
-    </ul>
-
-    <div class="date-select">
-      <p class="from selected">02/24/2017</p>
-      <p class="arrow">-></p>
-      <p class="to">03/02/2017</p>
-    </div>
-  </div>
   <div class="cost-view">
-    <div class="overlay">
+    <div class="overlay-move">
     </div>
     <ul class="nav nav-tabs">
-      <li class="active" ng-click="vm.moveOverlay({event: $event});"><a data-toggle="tab" href="#total-view"><p class="chart-name">Gross volumn</p><p class="chart-amount">$46.6K</p></a></li>
-      <li ng-click="vm.moveOverlay({event: $event});"><a data-toggle="tab" href="#customer-view"><p class="chart-name">New customers</p><p class="chart-amount">3</p></a></li>
-      <li ng-click="vm.moveOverlay({event: $event});"><a data-toggle="tab" href="#success-view"><p class="chart-name">Successful payments</p><p class="chart-amount">6</p></a></li>
+      <li ng-repeat="tab in vm.tabs" ng-class="{active: $index==0}" ng-click="vm.selectView({event: $event}, $index);">
+        <a data-toggle="tab">
+          <p class="chart-name">{{tab.tabCaption}}</p><p class="chart-amount">{{vm.extractCaption($index)}}</p>
+        </a>
+      </li>
+
     </ul>
 
     <div class="tab-content">
-      <div id="total-view" class="tab-pane fade in active">
-        total view
-      </div>
-      <div id="customer-view" class="tab-pane fade">
-        total view 2
-      </div>
-      <div id="success-view" class="tab-pane fade">
-        total view3
-      </div>
+      <linechart data="vm.chartData" options="vm.options"></linechart>
     </div>
   </div>
 </div>

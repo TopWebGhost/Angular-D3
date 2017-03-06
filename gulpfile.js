@@ -24,7 +24,9 @@ gulp.task('copy', () => {
     'node_modules/bootstrap/dist/css/bootstrap.min.css',
     'node_modules/bootstrap/dist/js/bootstrap.min.js',
     'node_modules/jquery/dist/jquery.min.js',
-    'node_modules/d3/build/d3.min.js'
+    'node_modules/n3-charts/node_modules/d3/d3.min.js',
+    'src/costview/LineChart.js',
+    'node_modules/n3-charts/build/LineChart.min.css'
   ])
   .pipe(gulp.dest('dist/vendor'));
 
