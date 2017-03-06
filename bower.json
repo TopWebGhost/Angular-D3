@@ -1,7 +1,7 @@
 {
-  "name": "angular-d3",
+  "name": "angular-d3-linechart",
   "description": "d3 line chart for angular",
-  "main": "costview/costview.component.js",
+  "main": "src/costview/costview.component.js",
   "authors": [
     "jace"
   ],
